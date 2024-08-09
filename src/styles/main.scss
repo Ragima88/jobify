@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./colors";
+
+@font-face {
+  font-family: "Varela Round";
+  src: url("../assets/fonts/VarelaRound-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
