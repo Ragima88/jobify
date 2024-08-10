@@ -1,0 +1,6 @@
+@import "../../../styles/mixins";
+
+.footer-column {
+  @include flex(column, flex-start, flex-start);
+  padding: 0 1rem;
+}

@@ -1,0 +1,6 @@
+@import "../../styles/mixins";
+
+.root-page {
+  @include flex(column, center, space-between);
+  flex: 1;
+}

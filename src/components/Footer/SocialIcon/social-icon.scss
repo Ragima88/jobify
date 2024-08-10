@@ -1,0 +1,12 @@
+@import "../../../styles/mixins";
+.social-icon {
+  @include flex(column, center, center);
+  width: 1.5rem;
+  margin-right: 0.75rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  & a {
+    @include flex(column, center, center);
+  }
+}

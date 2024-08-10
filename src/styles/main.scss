@@ -8,6 +8,13 @@
   src: url("../assets/fonts/VarelaRound-Regular.ttf") format("truetype");
 }
 
+html,
 body {
   font-family: "Varela Round", sans-serif;
+  height: 100%;
+}
+
+#root {
+  @include flex(column, center, flex-start);
+  height: 100%;
 }

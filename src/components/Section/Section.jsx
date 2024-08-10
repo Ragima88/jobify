@@ -1,11 +1,11 @@
 import Container from "../Container/Container";
 import "./section.scss";
 
-const Section = ({ children, sectionClass }) => {
+const Section = ({ className, children }) => {
   return (
-    <section className={`section ${sectionClass}`}>
+    <section className={`section ${className}`}>
       <Container>
-        <div className={`${sectionClass}-in`}>{children}</div>
+        <div className={`${className}-in`}>{children}</div>
       </Container>
     </section>
   );
