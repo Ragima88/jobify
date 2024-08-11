@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+.parallax-section {
+  background-image: url("../../assets/images/hero-image-text-right-darker.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
+  &-in {
+    @include flex(column, flex-end, center);
+    z-index: 1;
+    .parallax-content {
+      padding: 10rem 0 10rem 3rem;
+      color: #fff;
+      width: 100%;
+      max-width: 34.7rem;
+      .parallax-title {
+        font-size: 1.9rem;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+      .parallax-desc {
+        font-weight: normal;
+        line-height: 1.5;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
