@@ -1,6 +1,7 @@
 import HeroSection from "../../sections/HeroSection/HeroSection";
 import Section from "../../components/Section/Section";
 import "./home.scss";
+import Partners from "../../sections/Partners/Partners";
 
 const Home = () => {
   const categories = [
@@ -26,6 +27,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <HeroSection categories={categories} />
+      <Partners />
     </div>
   );
 };
