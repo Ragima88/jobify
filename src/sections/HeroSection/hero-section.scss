@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
 .hero-section {
-  background-image: url("../../assets//images/hero-bg.jpg");
+  background-image: url("../../assets/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,6 +47,7 @@
       background-color: $colorGreen;
       padding: 0.7rem;
       color: #fff;
+      font-family: "Montserrat";
       text-transform: uppercase;
       font-weight: 700;
       font-size: 0.875rem;

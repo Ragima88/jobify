@@ -1,0 +1,66 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+.vacancy-section {
+  &-in {
+    @include flex(column, center, center);
+    padding: 5rem 0;
+    .vacancy-section-title {
+      font-size: 2.25rem;
+      line-height: 1.3;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    .vacancy-section-list {
+      @include flex(column, center, center);
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+
+      .vacancy-item {
+        @include flex(row, center, space-between);
+        border-bottom: 1px solid #ccc;
+        padding: 1rem;
+        border-left: 5px solid transparent;
+        transition: border 0.3s ease;
+        &:last-child {
+          border-bottom: none;
+        }
+        &:hover {
+          border-left: 5px solid #5bbc2e;
+        }
+
+        &-image-bg {
+          width: 4rem;
+          height: 4rem;
+          background-color: #ececec;
+          flex: none;
+        }
+        &-desc {
+          @include flex(column, flex-start, center);
+          padding-left: 1rem;
+          &-name {
+            font-size: 1.125rem;
+          }
+          &-company {
+            font-size: 0.875rem;
+            font-weight: 700;
+          }
+        }
+        &-region {
+          @include flex(row, center, flex-start);
+          color: $regionColor;
+          &::before {
+            content: "";
+            background-image: url("../../assets/icons/location-100.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin: 0 0.5rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}

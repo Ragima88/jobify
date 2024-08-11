@@ -63,7 +63,7 @@ const Footer = () => {
             <h3 className="footer-column-site-map">Site Map</h3>
             {footerLinks.map((item) => {
               return (
-                <Link className={"footer-link"} to={item.link}>
+                <Link key={item.name} className={"footer-link"} to={item.link}>
                   {item.name}
                 </Link>
               );
@@ -73,7 +73,11 @@ const Footer = () => {
             <h3 className="footer-column-articles">Recent News Articles</h3>
             {footerBlogLinks.map((item) => {
               return (
-                <Link className={"footer-articles-link"} to={item.link}>
+                <Link
+                  key={item.name}
+                  className={"footer-articles-link"}
+                  to={item.link}
+                >
                   {item.name}
                 </Link>
               );
