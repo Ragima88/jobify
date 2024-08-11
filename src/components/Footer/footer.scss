@@ -4,7 +4,7 @@
 .footer {
   @include flex(column, center, center);
   &-top {
-    background-color: $footerTop;
+    background-color: $textColor;
     &-in {
       @include flex(column, center, center);
 

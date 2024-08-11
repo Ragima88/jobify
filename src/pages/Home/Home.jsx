@@ -1,7 +1,32 @@
+import HeroSection from "../../sections/HeroSection/HeroSection";
 import Section from "../../components/Section/Section";
 import "./home.scss";
 
 const Home = () => {
-  return <Section sectionClass={"hero-section"}></Section>;
+  const categories = [
+    { id: 1, name: "Design and Art" },
+    { id: 2, name: "HR and Office Management" },
+    { id: 3, name: "Law" },
+    { id: 4, name: "IT and Technology" },
+    { id: 5, name: "Media and Publishing" },
+    { id: 6, name: "Finance" },
+    { id: 7, name: "Marketing" },
+    { id: 8, name: "Customer Service" },
+    { id: 9, name: "Transport" },
+    { id: 10, name: "Sales" },
+    { id: 11, name: "Industry and Construction" },
+    { id: 12, name: "Supply and Logistics" },
+    { id: 13, name: "Security" },
+    { id: 14, name: "Education" },
+    { id: 15, name: "Healthcare" },
+    { id: 16, name: "Tourism and Leisure" },
+    { id: 17, name: "Agriculture" },
+    { id: 18, name: "Hospitality" },
+  ];
+  return (
+    <div className="home-page">
+      <HeroSection categories={categories} />
+    </div>
+  );
 };
 export default Home;

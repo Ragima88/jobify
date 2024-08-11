@@ -5,12 +5,12 @@
   @include flex(row, center, center, auto);
   &-link {
     @include flex(row, center, center);
-    color: $text;
+    color: $navigationColor;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     &:hover {
-      color: $textHover;
+      color: $navigationHoverColor;
     }
   }
 }
