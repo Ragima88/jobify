@@ -1,6 +1,5 @@
 @import "../../styles/mixins";
 .parallax-section {
-  background-image: url("../../assets/images/hero-image-text-right-darker.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -13,15 +12,35 @@
     bottom: 0;
     top: 0;
     width: 100%;
-    background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
+  }
+  &.left-aligned {
+    background-image: url("../../assets/images/hero-image-text-left-darker.jpg");
+    &::after {
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+    }
+  }
+  &.right-aligned {
+    background-image: url("../../assets/images/hero-image-text-right-darker.jpg");
+    &::after {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+    }
   }
   &-in {
-    @include flex(column, flex-end, center);
     z-index: 1;
+    &.right-aligned {
+      @include flex(column, flex-end, center);
+    }
+    &.left-aligned {
+      @include flex(column, flex-start, center);
+    }
     .parallax-content {
       padding: 10rem 0 10rem 3rem;
       color: #fff;

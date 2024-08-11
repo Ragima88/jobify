@@ -2,20 +2,13 @@ import "./parallax-section.scss";
 import Section from "../../components/Section/Section";
 import WhiteButton from "../../components/WhiteButton/WhiteButton";
 
-const ParallaxSection = () => {
+const ParallaxSection = ({ align, content }) => {
   return (
-    <Section className={"parallax-section"}>
+    <Section className={`${align}-aligned parallax-section`}>
       <div className="parallax-content">
-        <h2 className="parallax-title">
-          Make Recruiting Your Competitive Advantage
-        </h2>
-        <p className="parallax-desc">
-          Talent is a top priority for all startup founders and executives.
-          Jobify offers a way to completely optimize your entire recruiting
-          process. Find better candidates, conduct more focused interviews, and
-          make data-driven hiring decisions.
-        </p>
-        <WhiteButton text={"Get Started"} />
+        <h2 className="parallax-title">{content.title}</h2>
+        <p className="parallax-desc">{content.desc}</p>
+        <WhiteButton text={content.button} />
       </div>
     </Section>
   );
