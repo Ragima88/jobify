@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+.green-button {
+  padding: 0.9rem 1.5rem;
+  background-color: $colorGreen;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.3;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  border: 2px solid #5bbc2e;
+  &:hover {
+    background-color: #fff;
+    color: $colorGreen;
+  }
+}

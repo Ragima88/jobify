@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+.slider-section {
+  background-image: url(../../assets/images/slider-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-in {
+    @include flex(column, center, center);
+    padding: 5rem 0;
+    .slider-section-title {
+      font-size: 2.25rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+    .slider-section-desc {
+      color: #fff;
+    }
+  }
+}

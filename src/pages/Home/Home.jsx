@@ -5,6 +5,8 @@ import Partners from "../../sections/Partners/Partners";
 import ParallaxSection from "../../sections/ParallaxSection/ParallaxSection";
 import VacancySection from "../../sections/VacancySection/VacancySection";
 import StatsSection from "../../sections/StatsSection/StatsSection";
+import SliderSection from "../../sections/SliderSection/SliderSection";
+import BlogSection from "../../sections/BlogSection/BlogSection";
 
 const Home = () => {
   const categories = [
@@ -45,6 +47,8 @@ const Home = () => {
       <VacancySection />
       <ParallaxSection content={leftParallaxContent} align={"left"} />
       <StatsSection />
+      <SliderSection />
+      <BlogSection />
     </div>
   );
 };
