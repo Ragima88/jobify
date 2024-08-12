@@ -4,6 +4,7 @@ import "./home.scss";
 import Partners from "../../sections/Partners/Partners";
 import ParallaxSection from "../../sections/ParallaxSection/ParallaxSection";
 import VacancySection from "../../sections/VacancySection/VacancySection";
+import StatsSection from "../../sections/StatsSection/StatsSection";
 
 const Home = () => {
   const categories = [
@@ -43,6 +44,7 @@ const Home = () => {
       <ParallaxSection content={rightParallaxContent} align={"right"} />
       <VacancySection />
       <ParallaxSection content={leftParallaxContent} align={"left"} />
+      <StatsSection />
     </div>
   );
 };
