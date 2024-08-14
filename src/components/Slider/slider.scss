@@ -1,0 +1,65 @@
+@import "../../styles/mixins";
+
+.slider {
+  @include flex(column, center, center);
+  padding: 0 3rem 0 0;
+
+  &-testimonial {
+    @include flex(column, center, center);
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    margin: 0;
+    padding-left: 3.5rem;
+    text-align: center;
+    height: auto;
+    font-style: italic;
+    font-weight: 300;
+    quotes: none;
+  }
+  &-image {
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+  }
+  &-name {
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: none;
+    margin: 0.25rem 0 0;
+  }
+  &-content {
+    @include flex(column, center, center);
+    font-size: 1.15rem;
+    padding: 1.5rem;
+
+    background: #fff;
+    border-radius: 0.25rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.75rem 0.75rem 0;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      display: block;
+      bottom: -0.75rem;
+      left: 50%;
+      margin-left: -0.75rem;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  opacity: 0.75;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
