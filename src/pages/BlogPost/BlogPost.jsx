@@ -1,24 +1,16 @@
 import "./blog-post.scss";
 import Section from "../../components/Section/Section";
 import Image from "../../components/Image/Image";
-import author from "../../assets/images/author.jpeg";
 import blogImage from "../../assets/images/blog-image.jpg";
 import CommentForm from "../../components/CommentForm/CommentForm";
-import { Link } from "react-router-dom";
 import BlogAside from "../../components/BlogAside/BlogAside";
+import BlogAuthor from "../../components/BlogAuthor/BlogAuthor";
 
 const BlogPost = () => {
   return (
     <div className="blog-post-page">
       <Section className={"blog-post-section"}>
-        <div className="blog-post-author">
-          <Image className={"blog-post-author-img"} src={author} />
-          <div className="blog-post-author-desc">
-            Written by <a href={""}>admin</a>
-          </div>
-          <div className="blog-post-author-text">March 29, 2016</div>
-          <div className="blog-post-author-text">0 Comments</div>
-        </div>
+        <BlogAuthor />
         <article>
           <Image className={"blog-post-pic"} src={blogImage} />
           <h1 className="blog-post-title">

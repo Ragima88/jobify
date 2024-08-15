@@ -5,26 +5,7 @@
   &-in {
     @include flex(row, flex-start, center);
     padding: 5rem 0;
-    .blog-post-author {
-      @include flex(column, flex-start, center, 13rem);
-      flex: none;
-      padding: 0 1rem;
-      .blog-post-author-img {
-        width: 6.25rem;
-        height: 6.25rem;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .blog-post-author-desc {
-        margin-bottom: 1rem;
-        & a {
-          color: #008329;
-        }
-      }
-      .blog-post-author-text {
-        font-size: 0.8125rem;
-      }
-    }
+
     article {
       @include flex(column, flex-start, flex-start);
       padding: 0 1rem;

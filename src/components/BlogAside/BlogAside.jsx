@@ -6,7 +6,7 @@ const BlogAside = () => {
     <aside>
       <form>
         <div className="search-form">
-          <label for="search">Search</label>
+          <label htmlFor="search">Search</label>
           <input type="text" id="search" name="search" />
         </div>
         <button className="search-button">Search</button>

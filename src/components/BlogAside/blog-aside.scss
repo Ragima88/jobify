@@ -1,8 +1,10 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
+
 aside {
   @include flex(column, flex-start, flex-start, 16rem);
   flex: none;
+  padding: 0 1rem;
   form {
     @include flex(row, flex-end, flex-start);
     margin-bottom: 2rem;
