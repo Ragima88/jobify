@@ -7,7 +7,9 @@ const Root = () => {
   return (
     <div className={"root-page"}>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

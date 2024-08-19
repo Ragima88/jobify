@@ -1,14 +1,20 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
 .hero-section {
-  background-image: url("../../assets/images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background-color: #fafafa;
   &-in {
     @include flex(column, center, center);
     text-align: center;
+    padding: 3rem 0;
+  }
+
+  &.has-background {
+    background-image: url("../../assets/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &.has-background &-in {
     padding: 10rem 0;
   }
   &-title {
@@ -35,6 +41,8 @@
         border-style: none;
         width: 100%;
         color: $textColor;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
         &:last-child {
           margin-right: 0;
         }

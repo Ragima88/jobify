@@ -5,8 +5,8 @@ import Image from "../../components/Image/Image";
 import ListButton from "../../components/ListButton/ListButton";
 
 const VacancySection = ({
-  vacancies,
-  heading,
+  vacancies = [],
+  heading = "",
   hasButton = false,
   className = "",
 }) => {

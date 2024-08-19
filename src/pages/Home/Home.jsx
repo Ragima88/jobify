@@ -1644,7 +1644,14 @@ const Home = () => {
   };
   return (
     <div className="home-page">
-      <HeroSection categories={categories} />
+      <HeroSection
+        categories={categories}
+        title={"The Easiest Way to Get Your New Job"}
+        desc={
+          "Find jobs, create trackable resumes and enrich your applications."
+        }
+        bg={true}
+      />
       <Partners />
       <ParallaxSection content={rightParallaxContent} align={"right"} />
       <VacancySection

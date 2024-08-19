@@ -3,6 +3,7 @@
 
 .footer {
   @include flex(column, center, center);
+  justify-self: flex-end;
   &-top {
     background-color: $textColor;
     &-in {

@@ -3,4 +3,8 @@
 .root-page {
   @include flex(column, center, space-between);
   flex: 1;
+  main {
+    @include flex(column, center, flex-start);
+    flex: 1;
+  }
 }

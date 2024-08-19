@@ -1,19 +1,15 @@
 import "./hero-section.scss";
 import Section from "../../components/Section/Section";
 
-const HeroSection = ({ categories }) => {
+const HeroSection = ({ categories, title, desc, bg }) => {
   const sortedCategories = categories.sort((a, b) =>
     a.name.localeCompare(b.name)
   );
 
   return (
-    <Section className={"hero-section"}>
-      <h1 className="hero-section-title">
-        The Easiest Way to Get Your New Job
-      </h1>
-      <p className="hero-section-desc">
-        Find jobs, create trackable resumes and enrich your applications.
-      </p>
+    <Section className={`${bg ? "has-background" : ""} hero-section`}>
+      <h1 className="hero-section-title">{title}</h1>
+      <p className="hero-section-desc">{desc}</p>
       <form className="search-form">
         <div className="form-top">
           <input
