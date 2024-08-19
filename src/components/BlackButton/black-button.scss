@@ -1,0 +1,17 @@
+.black-button {
+  padding: 0.875rem 1rem;
+  color: #494949;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #494949;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #494949;
+    color: #fff;
+  }
+}

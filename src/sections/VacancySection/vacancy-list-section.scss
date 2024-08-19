@@ -1,22 +1,23 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
-.vacancy-section {
+.vacancy-list-section {
+  font-size: 1rem;
   &-in {
     @include flex(column, center, center);
     padding: 5rem 0;
-    .vacancy-section-title {
+    .vacancy-list-section-title {
       font-size: 2.25rem;
       line-height: 1.3;
       font-weight: 400;
       margin-bottom: 2rem;
     }
-    .vacancy-section-list {
+    .vacancy-list-section-list {
       @include flex(column, center, center);
       border: 1px solid #ccc;
       border-radius: 0.25rem;
       margin-bottom: 1rem;
 
-      .vacancy-item {
+      .vacancy-list-item {
         @include flex(row, center, space-between);
         border-bottom: 1px solid #ccc;
         padding: 1rem;

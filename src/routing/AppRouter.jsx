@@ -28,7 +28,8 @@ const router = createBrowserRouter([
         element: <Regions />,
       },
       {
-        path: "/vacancy/:vacancyId",
+        //path: "/vacancy/:vacancyId",
+        path: "/vacancy",
         element: <Vacancy />,
       },
       {
