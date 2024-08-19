@@ -1,13 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home/Home";
-import Companies from "../pages/Companies/Companies";
-import Regions from "../pages/Regions/Regions";
 import Vacancy from "../pages/Vacancy/Vacancy";
 import Vacancies from "../pages/Vacancies/Vacancies";
 import Blog from "../pages/Blog/Blog";
 import BlogPost from "../pages/BlogPost/BlogPost";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Root from "../pages/Root/Root";
+import Listing from "../pages/Listing/Listing";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/companies",
-        element: <Companies />,
+        element: <Listing variant={"companies"} />,
       },
       {
         path: "/regions",
-        element: <Regions />,
+        element: <Listing variant={"regions"} />,
       },
       {
         //path: "/vacancy/:vacancyId",
@@ -44,6 +43,10 @@ const router = createBrowserRouter([
         // path: "/blog-post/:blogPostId",
         path: "/blog-post",
         element: <BlogPost />,
+      },
+      {
+        path: "/post-a-job",
+        element: <p>Post a job</p>,
       },
     ],
   },
