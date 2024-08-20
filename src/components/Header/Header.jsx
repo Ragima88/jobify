@@ -3,6 +3,7 @@ import Logo from "../Logo/Logo";
 import Sizer from "../Sizer/Sizer";
 import Nav from "../Nav/Nav";
 import "./header.scss";
+import Login from "../LoginButton/LoginButton";
 
 const Header = () => {
   const items = [
@@ -19,7 +20,10 @@ const Header = () => {
           <Sizer width={"12.25rem"}>
             <Logo />
           </Sizer>
-          <Nav items={items} />
+          <div className="header-right">
+            <Nav items={items} />
+            <Login />
+          </div>
         </div>
       </Container>
     </header>

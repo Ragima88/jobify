@@ -7,6 +7,8 @@ import BlogPost from "../pages/BlogPost/BlogPost";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Root from "../pages/Root/Root";
 import Listing from "../pages/Listing/Listing";
+import Login from "./../pages/Login/Login";
+import Pricing from "../pages/Pricing/Pricing";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/companies",
@@ -47,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/post-a-job",
         element: <p>Post a job</p>,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
       },
     ],
   },

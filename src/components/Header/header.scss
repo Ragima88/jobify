@@ -5,5 +5,8 @@
   &-in {
     @include flex(row, center, space-between);
     padding: 1.5rem;
+    .header-right {
+      @include flex(row, center, flex-end);
+    }
   }
 }
