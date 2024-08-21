@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./white-button.scss";
 
-const WhiteButton = ({ src, text }) => {
+const WhiteButton = ({ className, src, text }) => {
   return (
-    <Link className={"white-button"} to={src}>
+    <Link className={`${className} white-button`} to={src}>
       {text}
     </Link>
   );
