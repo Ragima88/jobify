@@ -10,7 +10,6 @@
       padding: 2rem;
     }
     form {
-      //background-color: #fafafa;
       padding: 3rem 2rem;
       @include flex(column, flex-start, flex-start);
       .login-input {

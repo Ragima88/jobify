@@ -10,6 +10,7 @@ import Listing from "../pages/Listing/Listing";
 import Login from "./../pages/Login/Login";
 import Pricing from "../pages/Pricing/Pricing";
 import PostJob from "../pages/PostJob/PostJob";
+import SignUp from "../pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
       },
     ],
   },

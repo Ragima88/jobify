@@ -4,7 +4,7 @@
 .navigation {
   @include flex(row, center, center, auto);
   &-link {
-    @include flex(row, center, center);
+    @include flex(row, center, center, auto);
     color: $navigationColor;
     font-size: 1rem;
     padding: 0.5rem 1rem;
