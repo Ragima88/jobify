@@ -11,6 +11,7 @@ import Login from "./../pages/Login/Login";
 import Pricing from "../pages/Pricing/Pricing";
 import PostJob from "../pages/PostJob/PostJob";
 import SignUp from "../pages/SignUp/SignUp";
+import AddCompany from "../pages/AddCompany/AddCompany";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-up",
         element: <SignUp />,
+      },
+      {
+        path: "/submit-company",
+        element: <AddCompany />,
       },
     ],
   },
