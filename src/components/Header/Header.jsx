@@ -3,7 +3,10 @@ import Logo from "../Logo/Logo";
 import Sizer from "../Sizer/Sizer";
 import Nav from "../Nav/Nav";
 import "./header.scss";
-import Login from "../LoginButton/LoginButton";
+import LoginButton from "../LoginButton/LoginButton";
+import { useDispatch, useSelector } from "react-redux";
+import LogoutButton from "../LogoutButton/LogoutButton";
+import { logOut } from "../../store/slices/authSlice";
 
 const Header = () => {
   const items = [
@@ -14,6 +17,13 @@ const Header = () => {
     { name: "Sign up", href: "/sign-up", order: 5 },
   ];
 
+  const { isLoggedIn } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logOut());
+  };
+
   return (
     <header className={"header"}>
       <Container>
@@ -23,7 +33,11 @@ const Header = () => {
           </Sizer>
           <div className="header-right">
             <Nav items={items} />
-            <Login />
+            {isLoggedIn ? (
+              <LogoutButton onClick={handleLogout} />
+            ) : (
+              <LoginButton />
+            )}
           </div>
         </div>
       </Container>
