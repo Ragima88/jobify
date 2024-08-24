@@ -12,6 +12,7 @@ import Pricing from "../pages/Pricing/Pricing";
 import PostJob from "../pages/PostJob/PostJob";
 import SignUp from "../pages/SignUp/SignUp";
 import AddCompany from "../pages/AddCompany/AddCompany";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/post-a-job",
-        element: <PostJob />,
+        element: (
+          <ProtectedRoute>
+            <PostJob />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/pricing",
@@ -67,7 +72,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/submit-company",
-        element: <AddCompany />,
+        element: (
+          <ProtectedRoute>
+            <AddCompany />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
