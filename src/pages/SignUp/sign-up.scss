@@ -52,9 +52,14 @@
           @include flex(column, flex-start, center);
         }
       }
+      .error-msg {
+        margin-bottom: 1rem;
+        color: red;
+        width: 100%;
+      }
       .sign-up-bottom {
         @include flex(row, center, space-between);
-        button {
+        .button {
           color: #fff;
           font-family: "Montserrat";
           font-size: 18px;

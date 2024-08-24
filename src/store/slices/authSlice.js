@@ -17,7 +17,10 @@ const authSlice = createSlice({
     users: getInitialUsers(),
   },
   reducers: {
-    signUp: (state, action) => {},
+    signUp: (state, action) => {
+      state.users.push(action.payload);
+      localStorage.setItem("users", JSON.stringify(state.users));
+    },
     logIn: (state, action) => {},
     logOut: (state) => {},
   },
