@@ -41,8 +41,7 @@ const router = createBrowserRouter([
         element: <Listing variant={"categories"} />,
       },
       {
-        //path: "/vacancy/:vacancyId",
-        path: "/vacancy",
+        path: "/vacancy/:vacancyId",
         element: <Vacancy />,
       },
       {

@@ -8,7 +8,7 @@ const ParallaxSection = ({ align, content }) => {
       <div className="parallax-content">
         <h2 className="parallax-title">{content.title}</h2>
         <p className="parallax-desc">{content.desc}</p>
-        <WhiteButton text={content.button} src={"pricing"} />
+        <WhiteButton text={content.button} href={content.href} />
       </div>
     </Section>
   );

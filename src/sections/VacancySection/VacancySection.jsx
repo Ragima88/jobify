@@ -26,7 +26,11 @@ const VacancySection = ({
         <div className="vacancy-list-section-list">
           {jobPosts.slice(0, visibleJobPosts).map((item) => {
             return (
-              <Link className="vacancy-list-item" key={item.id} to={item.href}>
+              <Link
+                className="vacancy-list-item"
+                key={item.id}
+                to={`/vacancy/${item.id}`}
+              >
                 <div className="vacancy-list-item-image-bg">
                   <Image
                     className="vacancy-list-item-image"

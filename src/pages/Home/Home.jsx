@@ -24,12 +24,14 @@ const Home = () => {
   const rightParallaxContent = {
     title: "Make Recruiting Your Competitive Advantage",
     desc: "Talent is a top priority for all startup founders and executives. Jobify offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.",
-    button: "Get started",
+    button: "Post a Job",
+    href: "/post-a-job",
   };
   const leftParallaxContent = {
     title: "Join Thousands of Companies That Rely on Jobify",
     desc: "Jobify offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.",
     button: "Get started",
+    href: "/pricing",
   };
 
   const { selectedFilters, handleSelectChange, handleFilterChange } =
