@@ -1,6 +1,11 @@
 import "./stats-section.scss";
 import Section from "../../components/Section/Section";
-const StatsSection = () => {
+const StatsSection = ({
+  posted = 0,
+  companies = 0,
+  locations = 0,
+  categories = 0,
+}) => {
   return (
     <Section className={"stats-section"}>
       <h2 className="stats-section-title">Jobify Site Stats</h2>
@@ -10,20 +15,26 @@ const StatsSection = () => {
       </p>
       <ul className="stats-section-list">
         <li className="stats-section-list-item">
-          <strong className="stats-section-list-item-number">14</strong>Jobs
-          Posted
+          <strong className="stats-section-list-item-number">{posted}</strong>
+          Jobs Posted
         </li>
         <li className="stats-section-list-item">
-          <strong className="stats-section-list-item-number">0</strong>Jobs
-          Filled
+          <strong className="stats-section-list-item-number">
+            {locations}
+          </strong>
+          Locations
         </li>
         <li className="stats-section-list-item">
-          <strong className="stats-section-list-item-number">14</strong>
+          <strong className="stats-section-list-item-number">
+            {companies}
+          </strong>
           Companies
         </li>
         <li className="stats-section-list-item">
-          <strong className="stats-section-list-item-number">2,047</strong>
-          Members
+          <strong className="stats-section-list-item-number">
+            {categories}
+          </strong>
+          Categories
         </li>
       </ul>
     </Section>

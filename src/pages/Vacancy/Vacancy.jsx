@@ -81,7 +81,7 @@ const Vacancy = () => {
           <BlackButton />
         </aside>
       </Section>
-      <VacancySection heading={"Related Jobs"} vacancies={relatedJobs} />
+      <VacancySection heading={"Related Jobs"} jobPosts={relatedJobs} />
     </div>
   );
 };

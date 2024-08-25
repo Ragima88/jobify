@@ -35,6 +35,10 @@
           height: 4rem;
           background-color: #ececec;
           flex: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
         }
         &-desc {
           @include flex(column, flex-start, center);

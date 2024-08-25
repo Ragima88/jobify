@@ -20,10 +20,10 @@ const Footer = () => {
     { link: "#", name: "xing", src: xing },
   ];
   const footerLinks = [
-    { link: "#", name: "Vacancies" },
-    { link: "#", name: "Regions" },
-    { link: "#", name: "Companies" },
-    { link: "#", name: "Blog" },
+    { link: "/vacancies", name: "Vacancies" },
+    { link: "/regions", name: "Regions" },
+    { link: "/companies", name: "Companies" },
+    { link: "/blog", name: "Blog" },
   ];
   const footerBlogLinks = [
     {
