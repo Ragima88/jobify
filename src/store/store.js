@@ -4,6 +4,7 @@ import categoriesReducer from "./slices/categoriesSlice";
 import companiesReducer from "./slices/companiesSlice";
 import locationsReducer from "./slices/locationsSlice";
 import jobPostsReducer from "./slices/jobPostsSlice";
+import filteredJobPostsReducer from "./slices/filteredJobPostsSlice";
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   companies: companiesReducer,
   locations: locationsReducer,
   jobPosts: jobPostsReducer,
+  filteredJobPosts: filteredJobPostsReducer,
 });
 
 const store = configureStore({

@@ -7,6 +7,7 @@ import StatsSection from "../../sections/StatsSection/StatsSection";
 import SliderSection from "../../sections/SliderSection/SliderSection";
 import BlogSection from "../../sections/BlogSection/BlogSection";
 import { useSelector } from "react-redux";
+import { useFilter } from "../../hooks/useFilter";
 
 const Home = () => {
   const jobPosts = useSelector((state) => state.jobPosts.jobPosts);
@@ -30,6 +31,10 @@ const Home = () => {
     desc: "Jobify offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.",
     button: "Get started",
   };
+
+  const { selectedFilters, handleSelectChange, handleFilterChange } =
+    useFilter(jobPosts);
+
   return (
     <div className="home-page">
       <HeroSection
@@ -41,6 +46,10 @@ const Home = () => {
           "Find jobs, create trackable resumes and enrich your applications."
         }
         bg={true}
+        filters={selectedFilters}
+        onFilterChange={handleSelectChange}
+        onSubmit={handleFilterChange}
+        redirect={true}
       />
       <Partners />
       <ParallaxSection content={rightParallaxContent} align={"right"} />

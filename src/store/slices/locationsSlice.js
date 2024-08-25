@@ -1,4 +1,3 @@
-// features/jobs/jobSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import { locations } from "../../data/locations";
 

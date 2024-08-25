@@ -21,7 +21,8 @@ const Footer = () => {
   ];
   const footerLinks = [
     { link: "/vacancies", name: "Vacancies" },
-    { link: "/regions", name: "Regions" },
+    { link: "/categories", name: "Categories" },
+    { link: "/locations", name: "Locations" },
     { link: "/companies", name: "Companies" },
     { link: "/blog", name: "Blog" },
   ];

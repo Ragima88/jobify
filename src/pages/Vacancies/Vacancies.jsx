@@ -1,7 +1,9 @@
+import React, { useState } from "react";
 import "./vacancies.scss";
 import HeroSection from "../../sections/HeroSection/HeroSection";
 import VacancySection from "../../sections/VacancySection/VacancySection";
 import { useSelector } from "react-redux";
+import { useFilter } from "../../hooks/useFilter";
 
 const Vacancies = () => {
   const jobPosts = useSelector((state) => state.jobPosts.jobPosts);
@@ -9,11 +11,13 @@ const Vacancies = () => {
   const companies = useSelector((state) => state.companies.companies);
   const locations = useSelector((state) => state.locations.locations);
 
-  const sortedJobPosts = [...jobPosts].sort((a, b) => {
-    const dateA = new Date(a.date.split(".").reverse().join("-"));
-    const dateB = new Date(b.date.split(".").reverse().join("-"));
-    return dateB - dateA;
-  });
+  const {
+    selectedFilters,
+    filteredJobPosts,
+    handleSelectChange,
+    handleFilterChange,
+  } = useFilter(jobPosts);
+
   return (
     <>
       <HeroSection
@@ -23,9 +27,12 @@ const Vacancies = () => {
         title={"Find a job"}
         desc={""}
         bg={false}
+        filters={selectedFilters}
+        onFilterChange={handleSelectChange}
+        onSubmit={handleFilterChange}
       />
       <VacancySection
-        jobPosts={sortedJobPosts}
+        jobPosts={filteredJobPosts}
         companies={companies}
         locations={locations}
         hasButton
@@ -33,4 +40,5 @@ const Vacancies = () => {
     </>
   );
 };
+
 export default Vacancies;

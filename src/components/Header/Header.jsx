@@ -10,11 +10,12 @@ import { logOut } from "../../store/slices/authSlice";
 
 const Header = () => {
   const items = [
-    { name: "Blog", href: "/blog", order: 4 },
-    { name: "Companies", href: "/companies", order: 3 },
-    { name: "Regions", href: "/regions", order: 2 },
+    { name: "Blog", href: "/blog", order: 5 },
+    { name: "Categories", href: "/categories", order: 2 },
+    { name: "Companies", href: "/companies", order: 4 },
+    { name: "Locations", href: "/locations", order: 3 },
     { name: "Vacancies", href: "/vacancies", order: 1 },
-    { name: "Sign up", href: "/sign-up", order: 5 },
+    { name: "Sign up", href: "/sign-up", order: 6 },
   ];
 
   const { isLoggedIn } = useSelector((state) => state.auth);

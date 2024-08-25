@@ -33,8 +33,12 @@ const router = createBrowserRouter([
         element: <Listing variant={"companies"} />,
       },
       {
-        path: "/regions",
-        element: <Listing variant={"regions"} />,
+        path: "/locations",
+        element: <Listing variant={"locations"} />,
+      },
+      {
+        path: "/categories",
+        element: <Listing variant={"categories"} />,
       },
       {
         //path: "/vacancy/:vacancyId",
