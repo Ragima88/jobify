@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  min-height: 30rem;
   &::after {
     content: "";
     position: absolute;
@@ -36,16 +37,18 @@
   &-in {
     z-index: 1;
     &.right-aligned {
-      @include flex(column, flex-end, center);
+      @include flex(column, center, center);
     }
     &.left-aligned {
-      @include flex(column, flex-start, center);
+      @include flex(column, center, center);
     }
     .parallax-content {
-      padding: 10rem 0 10rem 3rem;
       color: #fff;
       width: 100%;
       max-width: 34.7rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      text-align: center;
       .parallax-title {
         font-size: 1.9rem;
         line-height: 1.4;
@@ -59,5 +62,17 @@
         margin-bottom: 2rem;
       }
     }
+  }
+}
+@media (min-width: 992px) {
+  .parallax-section-in .parallax-content {
+    padding: 10rem 0 10rem 3rem;
+    text-align: left;
+  }
+  .parallax-section-in.right-aligned {
+    @include flex(column, flex-end, center);
+  }
+  .parallax-section-in.left-aligned {
+    @include flex(column, flex-start, center);
   }
 }

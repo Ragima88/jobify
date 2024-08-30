@@ -53,7 +53,7 @@ const Home = () => {
         onSubmit={handleFilterChange}
         redirect={true}
       />
-      {/* <Partners />
+      <Partners />
       <ParallaxSection content={rightParallaxContent} align={"right"} />
       <VacancySection
         heading={"Hundreds of Jobs From All Over the Globe"}
@@ -70,7 +70,7 @@ const Home = () => {
         companies={companies.length}
       />
       <SliderSection />
-      <BlogSection /> */}
+      <BlogSection />
     </div>
   );
 };
