@@ -3,7 +3,7 @@ import "./login-button.scss";
 
 const LoginButton = () => {
   return (
-    <Link className="login-button" to={"login"}>
+    <Link className={`login-button`} to={"login"}>
       Login
     </Link>
   );

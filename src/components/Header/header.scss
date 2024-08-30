@@ -9,4 +9,18 @@
       @include flex(row, center, flex-end);
     }
   }
+  .z-logo {
+    z-index: 1001;
+    flex: none;
+  }
+  .humburger {
+    @include flex(column, center, center);
+    @include rs(display, flex, flex, none);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fafafa;
+    padding: 0.5rem;
+    flex: none;
+    z-index: 1001;
+  }
 }

@@ -1,7 +1,7 @@
 import "./image.scss";
-const Image = ({ className, src, alt }) => {
+const Image = ({ className, src, alt, onClick }) => {
   return (
-    <div className={`image ${className}`}>
+    <div onClick={onClick} className={`image ${className}`}>
       <img src={src} alt={alt} />
     </div>
   );

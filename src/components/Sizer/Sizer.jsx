@@ -1,8 +1,8 @@
 import "./sizer.scss";
 
-const Sizer = ({ width, children }) => {
+const Sizer = ({ width, className, children }) => {
   return (
-    <div className={"sizer"} style={{ width: width }}>
+    <div className={`sizer ${className}`} style={{ width: width }}>
       {children}
     </div>
   );
