@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Section from "../../components/Section/Section";
 import "./listing.scss";
 import { useSelector } from "react-redux";
+import { useFilter } from "../../hooks/useFilter";
 
 const Listing = ({ variant = "categories" }) => {
+  const navigate = useNavigate();
   const posts = useSelector((state) => state.jobPosts.jobPosts);
   const listing = useSelector((state) => state[variant][variant]);
-
   const sortedListing = [...listing].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
-
   const updatedListing = sortedListing.map((item) => {
     const count = posts.filter(
       (post) => post[`${variant}_id`] === item.id
@@ -20,6 +20,29 @@ const Listing = ({ variant = "categories" }) => {
       count,
     };
   });
+  const { _, handleSelectChange, handleFilterChange } = useFilter(posts);
+
+  const listingVariant =
+    variant === "categories"
+      ? "category"
+      : variant === "locations"
+      ? "location"
+      : variant === "companies"
+      ? "company"
+      : -1;
+
+  const handleClick = (id) => {
+    handleSelectChange({
+      ...{
+        company: -1,
+        location: -1,
+        category: -1,
+      },
+      [listingVariant]: id,
+    });
+    handleFilterChange();
+    navigate("/vacancies");
+  };
 
   return (
     <div className="listing-page">
@@ -30,9 +53,9 @@ const Listing = ({ variant = "categories" }) => {
         <div className="listing-grid">
           {updatedListing.map((item) => (
             <div key={item.id} className="listing-item">
-              <Link href={item.link} target="_blank">
+              <div onClick={() => handleClick(item.id)}>
                 {item.name} ({item.count} posts)
-              </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -41,7 +41,11 @@
         padding: 6px 0;
         border-bottom: 1px solid #eee;
         color: #008329;
-        text-decoration: none;
+
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
