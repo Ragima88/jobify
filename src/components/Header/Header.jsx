@@ -10,7 +10,7 @@ import Hamburger from "./Hamburger";
 
 const Header = () => {
   const items = [
-    { name: "Blog", href: "/blog", order: 5 },
+    { name: "Post", href: "/post-a-job", order: 5 },
     { name: "Categories", href: "/categories", order: 2 },
     { name: "Companies", href: "/companies", order: 4 },
     { name: "Locations", href: "/locations", order: 3 },
@@ -40,6 +40,7 @@ const Header = () => {
               isOpen={isOpen}
               isLoggedIn={isLoggedIn}
               handleLogout={handleLogout}
+              setOpen={setOpen}
             />
             <Hamburger isOpen={isOpen} setOpen={setOpen} />
           </div>

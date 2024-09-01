@@ -13,18 +13,22 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialIcons = [
-    { link: "#", name: "facebook", src: facebook },
-    { link: "#", name: "instagram", src: instagram },
-    { link: "#", name: "linkedin", src: linkedin },
-    { link: "#", name: "twitter", src: twitter },
-    { link: "#", name: "xing", src: xing },
+    {
+      link: "https://www.facebook.com/",
+      name: "facebook",
+      src: facebook,
+    },
+    { link: "https://www.instagram.com/", name: "instagram", src: instagram },
+    { link: "https://www.linkedin.com/", name: "linkedin", src: linkedin },
+    { link: "https://www.twitter.com/", name: "twitter", src: twitter },
+    { link: "https://www.xing.com/", name: "xing", src: xing },
   ];
   const footerLinks = [
     { link: "/vacancies", name: "Vacancies" },
     { link: "/categories", name: "Categories" },
     { link: "/locations", name: "Locations" },
     { link: "/companies", name: "Companies" },
-    { link: "/blog", name: "Blog" },
+    { link: "/post-a-job", name: "Post" },
   ];
   const footerBlogLinks = [
     {

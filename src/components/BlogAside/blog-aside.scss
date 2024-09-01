@@ -2,9 +2,9 @@
 @import "../../styles/colors";
 
 aside {
-  @include flex(column, flex-start, flex-start, 16rem);
-  flex: none;
-  padding: 0 1rem;
+  @include flex(column, flex-start, flex-start);
+  flex: auto;
+  padding: 3rem 1rem;
   form {
     @include flex(row, flex-end, flex-start);
     margin-bottom: 2rem;
@@ -62,5 +62,13 @@ aside {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+@media (min-width: 1300px) {
+  aside {
+    width: 16rem;
+    flex: none;
+    padding: 0rem 1rem;
   }
 }

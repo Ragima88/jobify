@@ -2,6 +2,7 @@
 .blog-post-author {
   @include flex(column, flex-start, center, 13rem);
   flex: none;
+  order: 1;
   padding: 0 1rem;
   .blog-post-author-img {
     width: 6.25rem;
@@ -17,5 +18,10 @@
   }
   .blog-post-author-text {
     font-size: 0.8125rem;
+  }
+}
+@media (min-width: 1300px) {
+  .blog-post-author {
+    order: 0;
   }
 }

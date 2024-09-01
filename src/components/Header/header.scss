@@ -18,12 +18,18 @@
   }
   .humburger {
     @include flex(column, center, center);
-    @include rs(display, flex, flex, none);
+    display: flex;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #fafafa;
     padding: 0.5rem;
     flex: none;
     z-index: 1001;
+  }
+
+  @media (min-width: 992px) {
+    .humburger {
+      display: none;
+    }
   }
 }

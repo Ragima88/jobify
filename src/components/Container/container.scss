@@ -1,6 +1,24 @@
 @import "../../styles/mixins";
 
 .container {
-  @include rs(max-width, 100%, 750px, 970px, 1170px);
+  max-width: 100%;
   @include flex(column, center, center);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
 }

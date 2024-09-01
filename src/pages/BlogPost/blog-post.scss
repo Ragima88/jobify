@@ -4,6 +4,7 @@
 .blog-post-section {
   &-in {
     @include flex(row, flex-start, center);
+    flex-wrap: wrap;
     padding: 5rem 0;
 
     article {
@@ -30,5 +31,10 @@
         margin-bottom: 1.5rem;
       }
     }
+  }
+}
+@media (min-width: 1300px) {
+  .blog-post-section-in {
+    flex-wrap: nowrap;
   }
 }

@@ -13,7 +13,6 @@ const HeroSection = ({
   filters,
   onFilterChange = () => {},
   onSubmit = () => {},
-  redirect = false,
 }) => {
   const navigate = useNavigate();
   const sortedCategories = [...categories].sort((a, b) =>

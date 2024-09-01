@@ -45,7 +45,7 @@ const BlogSection = ({}) => {
               <h3 className="blog-section-article-title">{item.title}</h3>
               <p className="blog-section-article-date">{item.date}</p>
               <p className="blog-section-article-content">{item.text}</p>
-              <GreenButton text={"Continue Reading"} />
+              <GreenButton src="/blog-post" text={"Continue Reading"} />
             </div>
           );
         })}

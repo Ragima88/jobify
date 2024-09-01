@@ -3,11 +3,16 @@ import "./nav.scss";
 import LogoutButton from "../LogoutButton/LogoutButton";
 import LoginButton from "../LoginButton/LoginButton";
 
-const Nav = ({ items, isOpen, isLoggedIn, handleLogout }) => {
+const Nav = ({ items, isOpen, isLoggedIn, handleLogout, setOpen }) => {
   const sortedItems = [...items].sort((a, b) => a.order - b.order);
   const elements = sortedItems.map((item) => {
     return (
-      <Link className={"navigation-link"} key={item.name} to={item.href}>
+      <Link
+        className={"navigation-link"}
+        key={item.name}
+        to={item.href}
+        onClick={() => setOpen(false)}
+      >
         {item.name}
       </Link>
     );

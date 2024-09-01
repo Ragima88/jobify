@@ -51,7 +51,6 @@ const Home = () => {
         filters={selectedFilters}
         onFilterChange={handleSelectChange}
         onSubmit={handleFilterChange}
-        redirect={true}
       />
       <Partners />
       <ParallaxSection content={rightParallaxContent} align={"right"} />
